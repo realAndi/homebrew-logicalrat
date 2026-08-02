@@ -12,18 +12,16 @@ cask "logicalrat" do
 
   app "LogicalRat.app"
 
-  # The build is ad-hoc signed rather than notarized, so Homebrew's quarantine would stop it
-  # launching. Install with --no-quarantine, or clear the attribute afterwards.
+  # The build is ad-hoc signed rather than notarized, so Gatekeeper blocks it until the
+  # quarantine attribute is cleared. Homebrew removed --no-quarantine, so this is manual.
   caveats do
     <<~EOS
       LogicalRat is ad-hoc signed and not notarized, so macOS will refuse to open it
-      unless the quarantine attribute is cleared:
+      until you clear the quarantine attribute:
 
         xattr -dr com.apple.quarantine "#{appdir}/LogicalRat.app"
 
-      Installing with --no-quarantine avoids this:
-
-        brew install --cask --no-quarantine logicalrat
+      Alternatively, right-click the app in Finder and choose Open, then Open again.
     EOS
   end
 
