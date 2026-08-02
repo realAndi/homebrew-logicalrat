@@ -8,7 +8,7 @@ cask "logicalrat" do
   desc "Menu bar battery, DPI and polling rate for the Logitech PRO X Superlight 2"
   homepage "https://github.com/realAndi/LogicalRat"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "LogicalRat.app"
 
