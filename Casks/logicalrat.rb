@@ -1,6 +1,6 @@
 cask "logicalrat" do
-  version "0.1.0"
-  sha256 "5df7bde4392ef7caeb50dfbbf9181180005f45c6b455d65cd29d8087e15f1a2e"
+  version "0.2.0"
+  sha256 "90021ed0cf561c2d6764543b3968d18bf07cf7d41b386428d2cb04e214a2121d"
 
   url "https://github.com/realAndi/LogicalRat/releases/download/v#{version}/LogicalRat-#{version}.zip",
       verified: "github.com/realAndi/LogicalRat/"
